@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab");
+
+/* Variable */
+:root {
+    --primary-color: #98694F; /* Use for all */
+    --secondary-color: #755139; /* Use for name */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #F5EDDA;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+/* Top page */
+section {
+    height: auto;
+    width: 100%;
+    border-top: 1px solid var(--primary-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+section:first-child {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    border-top: none;
+}
+
+.container {
+    height: 85%;
+    width: 85%;
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    padding: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .name {
+    color: var(--secondary-color);
+    font-family: "Righteous", cursive;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+
+    animation: slideIn 0.7s ease-in-out;
+}
+
+.container .bio {
+    color: var(--primary-color);
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+    animation: slideIn 0.7s ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.container .contact {
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+
+    bottom: 0;
+}
+
+.container .contact .btn {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid var(--primary-color);
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    animation: slideUp 0.7s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.container .contact .btn:last-child {
+    border-radius: 30px;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.container .contact .btn:last-child p {
+    margin-left: 1rem;
+}
+
+.container .contact .btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* About me */
+.about {
+    /* height: 100vh; */
+    height: fit-content;
+    width: 100%;
+    border-top: 1px solid var(--primary-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.about h1 {
+    color: var(--secondary-color);
+    font-family: "Righteous", cursive;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    left: -1rem;
+}
+.about h2 {
+    color: var(--secondary-color);
+    font-family: "Righteous", cursive;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    left: -1rem;
+}
+
+.about p, li {
+    color: var(--primary-color);
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px){
+    .container {
+        height: 90%;
+        width: 90%;
+        padding: 5%;
+    }
+
+    .container .name {
+        font-size: 3rem;
+        left: 0;
+    }
+
+    .container .bio {
+        font-size: 3vh;
+    }
+
+    .container .contact .btn {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1rem;
+    }
+
+    .container .contact .btn:last-child p {
+        display: none;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 0.8rem;
+    }
+}
